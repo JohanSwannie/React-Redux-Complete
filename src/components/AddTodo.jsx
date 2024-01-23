@@ -8,7 +8,9 @@ function AddTodo() {
 
   const addTodoHandler = (event) => {
     event.preventDefault();
-    dispatch(addTodo(todoMsg));
+    if (todoMsg) {
+      dispatch(addTodo(todoMsg));
+    }
     setTodoMsg("");
   };
 
