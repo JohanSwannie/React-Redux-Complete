@@ -1,19 +1,16 @@
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { deleteTodo } from "../features/todo/todoSlice";
+import Todos from "./Todos";
 
 const ListTodos = () => {
   const todos = useSelector((state) => state.todos);
 
-  const dispatch = useDispatch();
-
   return (
-    <div>
-      <ul className="list-none">
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.text}</li>
-        ))}
-      </ul>
+    <div className="flex flex-wrap gap-y-2">
+      {todos.map((todo) => (
+        <div key={todo.id} className="w-full">
+          <Todos todo={todo} />
+        </div>
+      ))}
     </div>
   );
 };
