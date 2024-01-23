@@ -13,11 +13,11 @@ function AddTodo() {
   };
 
   return (
-    <form onSubmit={addTodoHandler} className="flex border-white border-2">
+    <form onSubmit={addTodoHandler} className="flex border-white border-2 mb-8">
       <input
         type="text"
         className="w-full border placeholder:text-white-700 border-black/10 px-3 outline-none duration-150 bg-white/20 py-1.5"
-        placeholder="Add text for your To Do"
+        placeholder="Add text for To Do"
         value={todoMsg}
         onChange={(event) => setTodoMsg(event.target.value)}
       />
