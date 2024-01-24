@@ -5,7 +5,7 @@ const ListTodos = () => {
   const todos = useSelector((state) => state.todos);
 
   return (
-    <div className="flex flex-wrap gap-y-2">
+    <div className="flex flex-wrap gap-y-4">
       {todos.map((todo) => (
         <div key={todo.id} className="w-full">
           <Todos todo={todo} />
