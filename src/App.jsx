@@ -1,5 +1,5 @@
 import AddTodo from "./components/AddTodo";
-import ListTodos from "./components/listTodos";
+import ListTodos from "./components/ListTodos";
 
 function App() {
   return (
