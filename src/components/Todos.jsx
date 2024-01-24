@@ -10,7 +10,7 @@ function Todos({ todo }) {
         type="text"
         value={todo.text}
         className="w-full bg-transparent rounded-lg"
-        readonly
+        readOnly
       />
       <button
         className="bg-[#14195d] px-2 py-1 border-white border-2"
