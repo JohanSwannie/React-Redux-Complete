@@ -15,12 +15,19 @@ export const todoSlice = createSlice({
       };
       state.todos.push(todo);
     },
+    updateTodo: (state, action) => {
+      state.todos = state.todos.map((prevTodo) =>
+        prevTodo.id === action.payload[0]
+          ? { id: action.payload[0], text: action.payload[1] }
+          : prevTodo
+      );
+    },
     deleteTodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
   },
 });
 
-export const { addTodo, deleteTodo } = todoSlice.actions;
+export const { addTodo, updateTodo, deleteTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;
